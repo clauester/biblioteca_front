@@ -87,7 +87,7 @@ export class AgregarEditarPrestamoComponent implements OnInit {
   }
   obtenerIdsLibros(){
    this._libroService.getLibros().subscribe(data => {
-          this.listaLibros =  data.map(usuario => usuario.id )
+          this.listaLibros =  data.map(usuario => usuario.id  )
          console.log(data.map(usuario => usuario.id ))
     })
     
@@ -96,8 +96,14 @@ export class AgregarEditarPrestamoComponent implements OnInit {
   }
   obtenerIdsUsuarios(){
     this._usuarioService.getUsuarios().subscribe(data => {
-           this.listaUsuarios =  data.map(usuario => usuario.id )
-          console.log(data.map(usuario => usuario.id ))
+         this.listaUsuarios = data.map(usuario => ({
+      id: usuario.id,
+      cedula: usuario.cedula
+    }));
+          console.log(data.map(usuario => ({
+      id: usuario.id,
+      cedula: usuario.cedula
+    })))
      })
      
  

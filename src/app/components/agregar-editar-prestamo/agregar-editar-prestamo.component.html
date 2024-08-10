@@ -1,5 +1,5 @@
 <div class="title">
-    <h1>{{operacion}} Factura Autolavado</h1>
+    <h1 style="font-size: 48px;">{{operacion}} Prestamo</h1>
 </div>
 
 <app-spinner *ngIf="loading"></app-spinner>
@@ -32,8 +32,8 @@
                     <mat-form-field appearance="outline">
                         <mat-label>id Usuario</mat-label>
                         <mat-select formControlName="id_usuario">
-                            <mat-option *ngFor="let id of listaUsuarios" [value]="id">
-                                {{ id }}
+                            <mat-option *ngFor="let usuario of listaUsuarios" [value]="usuario.id">
+                                {{ usuario.cedula }}
                             </mat-option>
                         </mat-select>
                     </mat-form-field>

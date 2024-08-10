@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand">
             <img src="../../../assets/book-svg.svg"  alt="logo-pag" width="30" height="24"
                 class="d-inline-block align-text-top">
               
@@ -13,17 +13,17 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100">
-                <li class="nav-item">
+                <li class="nav-item" *ngIf="estaLogueado">
                     <a class="nav-link active" aria-current="page" (click)="paginaInicio()" >Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" *ngIf="estaLogueado">
                     <a class="nav-link active" aria-current="page" (click)="paginaLibros()">Libros</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" *ngIf="estaLogueado">
                     <a class="nav-link active" aria-current="page" (click)="paginaPrestamos()" >Prestamos</a>
                 </li>
-                <li class="nav-item ms-auto">
-                    <a class="nav-link active" aria-current="page" href="/home/">Cerrar Sesion</a>
+                <li class="nav-item ms-auto" >
+                    <a class="nav-link active" aria-current="page" (click)="cerrarSesion()">{{estaLogueado ? 'Cerrar sesion': ''}}</a>
                 </li>
               
                 

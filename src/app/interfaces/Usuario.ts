@@ -6,5 +6,6 @@ export interface Usuario{
     nombres?: string,
     apellidos?: string,
     correo_electronico?: string,
+    contrasena?: string,
     rol?: Rol
 }

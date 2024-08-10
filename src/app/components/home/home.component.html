@@ -1,8 +1,8 @@
 <div>
-    <div class="row justify-content-center">
-        <div class="col-md-8 ">
+    <div class="row justify-content-center" style="background: #666;">
+        <div class="col-md-8 " >
             <div class="card justify-content-center" 
-            style="height: 16rem;border-top-color: transparent; border-bottom-color: transparent; border-radius: 0px;">
+            style="height: 300px;border-top-color: transparent; border-bottom-color: transparent; border-radius: 0px; background: #d3d3d3;">
                 <div class="card-body text-center mt-5">
                     <h1 class="card-text" style="font-size: 3.5rem;">Bienvenido</h1>
                 </div>      
@@ -14,16 +14,16 @@
     </div>
     <div  style="border-top: 1px solid #000;  ">
         <div class="container mt-4" >
-            <p>Bienvenido usuario</p>
-            <p>Fecha: </p>
+            <p>Bienvenido Usuario:  {{usuario.nombres +" "+usuario.apellidos}} {{"CI: "+usuario.cedula}}</p>
+            <p>Fecha: {{fecha}} </p>
             
                 <div class="d-flex justify-content-between mt-4">
                     <div class="col-md-3">
                         <div class="custom-div p-1 mb-3" style="border: 1px solid #000; min-height: 183px;">
                             <h3 class="text-center" style="font-size: 1.5rem;">>Libros Agregados</h3>
                             <ul>
-                                <li>Ultimas 24 horas:  </li>
-                                <li>ultimo mes: </li>
+                                <li>Ultimas 24 horas: El Principe</li>
+                                <li>ultimo mes: Agosto</li>
                             </ul>
                            
                         </div>
@@ -32,8 +32,8 @@
                         <div class="custom-div p-1 mb-3" style="border: 1px solid #000; min-height: 183px;">
                             <h3 class="text-center"  style="font-size: 1.5rem;">>Libros Consultados</h3>
                             <ul>
-                                <li>Ultimas 24 horas:  </li>
-                                <li>ultimo mes: </li>
+                                <li>Ultimas 24 horas: Matematicas 2 </li>
+                                <li>ultimo mes: Agosto </li>
                             </ul>
                           
                         </div>
@@ -42,8 +42,8 @@
                         <div class="custom-div p-1 mb-3" style="border: 1px solid #000;min-height: 183px;">
                             <h3 class="text-center"  style="font-size: 1.5rem;">>Libros Prestados</h3>
                             <ul>
-                                <li>Ultimas 24 horas:  </li>
-                                <li>ultimo mes: </li>
+                                <li>Ultimas 24 horas: Matematicas 2 </li>
+                                <li>ultimo mes: Agosto </li>
                             </ul>
                             
                         </div>
