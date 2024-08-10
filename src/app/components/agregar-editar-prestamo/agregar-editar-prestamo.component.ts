@@ -44,8 +44,8 @@ export class AgregarEditarPrestamoComponent implements OnInit {
         
     this.form = this.fb.group({
 
-      id_libro: [0, [Validators.required,Validators.pattern("^[0-9]*$")]],
-      id_usuario: [0, [Validators.required,Validators.pattern("^[0-9]*$")]],
+      id_libro: ["", Validators.required],
+      id_usuario: ["", Validators.required],
       fecha_prestamo: ['', Validators.required],
       fecha_devolucion: ['', Validators.required],
       estado: ['', Validators.required]
