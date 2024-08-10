@@ -1,0 +1,30 @@
+.card {
+    margin-top: 15px;
+}
+
+.txtCard {
+    margin: 12px;
+}
+
+mat-form-field {
+    width: 95%;
+    height: 95%;
+    margin: 12px 14px;
+    margin-top: 20px;
+}
+
+.mat-mdc-radio-button~.mat-mdc-radio-button {
+    margin-left: 16px;
+}
+
+.radioLabel {
+    margin-right: 30px;
+}
+
+.full{
+    width: 100%;
+}
+
+.btnAceptar {
+    margin-right: 20px;
+}

@@ -1,0 +1,79 @@
+<div class="title">
+    <h1>{{operacion}} Factura Autolavado</h1>
+</div>
+
+<app-spinner *ngIf="loading"></app-spinner>
+
+<div class="container">
+    <mat-card class="card">
+        <mat-card-subtitle class="txtCard">
+            Datos del Prestamo
+        </mat-card-subtitle>
+        <form [formGroup]="form" (ngSubmit)="agregarEditarPrestamo()">
+            <mat-grid-list cols="3" rowHeight="80px">
+                <!-- <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>id_libro</mat-label>
+                        <input formControlName="id_libro" matInput autocomplete="off">
+                    </mat-form-field>
+                </mat-grid-tile> -->
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>id Libro</mat-label>
+                        <mat-select formControlName="id_libro">
+                            <mat-option *ngFor="let id of listaLibros" [value]="id">
+                                {{ id }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </mat-grid-tile>
+                
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>id Usuario</mat-label>
+                        <mat-select formControlName="id_usuario">
+                            <mat-option *ngFor="let id of listaUsuarios" [value]="id">
+                                {{ id }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </mat-grid-tile>
+         
+                
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Estado</mat-label>
+                        <input formControlName="estado" matInput autocomplete="off">
+                    </mat-form-field>
+                </mat-grid-tile>
+                
+                <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>Fecha Prestamo</mat-label>
+                    <input matInput formControlName="fecha_prestamo" [matDatepicker]="picker">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field>
+                        <mat-label>Fecha Devolucion</mat-label>
+                        <input matInput formControlName="fecha_devolucion" [matDatepicker]="picker2">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                        <mat-datepicker #picker2></mat-datepicker>
+                      </mat-form-field>
+                    </mat-grid-tile>
+                
+
+                <mat-grid-tile [colspan]="3">
+                    <button [disabled]="form.invalid" type="submit" class="btnAceptar" mat-raised-button color="primary">Guardar</button>
+                    <button mat-raised-button routerLink="/lista-prestamos">Volver</button>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </form>
+    </mat-card>
+
+</div>
